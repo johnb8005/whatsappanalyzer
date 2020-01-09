@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/whatsappanalyzer/static/css/main.9fbf3078.chunk.css",
+    "main.js": "/whatsappanalyzer/static/js/main.11216f3b.chunk.js",
+    "main.js.map": "/whatsappanalyzer/static/js/main.11216f3b.chunk.js.map",
+    "runtime~main.js": "/whatsappanalyzer/static/js/runtime~main.37f71523.js",
+    "runtime~main.js.map": "/whatsappanalyzer/static/js/runtime~main.37f71523.js.map",
+    "static/js/2.ffa21334.chunk.js": "/whatsappanalyzer/static/js/2.ffa21334.chunk.js",
+    "static/js/2.ffa21334.chunk.js.map": "/whatsappanalyzer/static/js/2.ffa21334.chunk.js.map",
+    "index.html": "/whatsappanalyzer/index.html",
+    "precache-manifest.04def159ef4e1a989884ce518d60a336.js": "/whatsappanalyzer/precache-manifest.04def159ef4e1a989884ce518d60a336.js",
+    "service-worker.js": "/whatsappanalyzer/service-worker.js",
+    "static/css/main.9fbf3078.chunk.css.map": "/whatsappanalyzer/static/css/main.9fbf3078.chunk.css.map"
+  }
+}
