@@ -1,3 +1,7 @@
+# Whatsapp Analyzer
+
+[See it in action](https://johnb8005.github.io/whatsappanalyzer/)
+
 ## Resources
 
 https://medium.com/@ilonacodes/front-end-shorts-how-to-read-content-from-the-file-input-in-react-17f49b293909
