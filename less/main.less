@@ -1,0 +1,90 @@
+@color1: #1f618d;
+
+/*
+css
+ */
+
+/* unvisited link */
+a:link {
+  color: @color1;
+}
+
+/* visited link */
+a:visited {
+  color: @color1;
+}
+
+/* mouse over link */
+a:hover {
+  color: @color1;
+}
+
+/* selected link */
+a:active {
+  color: @color1;
+}
+
+button {
+  background-color: @color1;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/**
+ * file uploader styling
+ */
+.file-upload-wrapper{
+  
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  
+
+  .file-upload{
+
+    height:200px;
+    width:200px;
+    border-radius: 100px;
+    position:relative;
+    
+    display:flex;
+    justify-content:center;
+    align-items: center;  
+
+    border:4px solid #FFFFFF;
+    overflow:hidden;
+    background-image: linear-gradient(to bottom, @color1 50%, #FFFFFF 50%);
+    background-size: 100% 200%;
+    transition: all 1s;
+    color: #FFFFFF;
+    font-size:100px;
+
+    input[type='file']{
+
+      height:200px;
+      width:200px;
+      position:absolute;
+      top:0;
+      left:0;
+      opacity:0;
+      cursor:pointer;
+
+    }
+
+    &:hover{
+
+      background-position: 0 -100%;
+
+      color: @color1;
+
+    }
+  }
+}
