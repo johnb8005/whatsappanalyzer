@@ -1,5 +1,7 @@
 # Whatsapp Analyzer
 
+[![TavisCI](https://travis-ci.com/johnb8005/whatsappanalyzer.svg?branch=master)](https://travis-ci.com/johnb8005/whatsappanalyzer)
+
 [See it in action](https://johnb8005.github.io/whatsappanalyzer/)
 
 ## Resources
