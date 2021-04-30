@@ -1,6 +1,7 @@
 # Whatsapp Analyzer
 
 [![TavisCI](https://travis-ci.com/johnb8005/whatsappanalyzer.svg?branch=master)](https://travis-ci.com/johnb8005/whatsappanalyzer)
+[![Deployment](https://github.com/johnb8005/whatsappanalyzer/actions/workflows/deploy.yml/badge.svg)](https://github.com/johnb8005/whatsappanalyzer/actions/workflows/deploy.yml)
 
 [See it in action](https://johnb8005.github.io/whatsappanalyzer/)
 
@@ -10,5 +11,5 @@
 * https://simon-schraeder.de/posts/filereader-async/
 * http://recharts.org/en-US/examples/PieResponsiveContainer
 
-### File upload
+
 
