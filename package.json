@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@nexys/utils": "1.1.3",
+    "@nexys/utils": "^3.9.14",
     "lessc": "^1.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -12,8 +12,8 @@
   },
   "scripts": {
     "lint": "eslint src/",
-    "start": "react-scripts start",
-    "build": "PUBLIC_URL=/whatsappanalyzer react-scripts build",
+    "start": "SNOWPACK_PUBLIC_URL= snowpack dev --polyfill-node",
+    "build": "SNOWPACK_PUBLIC_URL=/whatsappanalyzer snowpack build --polyfill-node",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lessToCss": "lessc ./less/main.less src/App.css"
@@ -32,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "snowpack": "^3.3.7"
   }
 }
