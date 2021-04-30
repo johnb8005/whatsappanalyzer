@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/whatsappanalyzer/static/css/main.c7d84c72.chunk.css",
-    "main.js": "/whatsappanalyzer/static/js/main.98f2c287.chunk.js",
-    "main.js.map": "/whatsappanalyzer/static/js/main.98f2c287.chunk.js.map",
+    "main.css": "/whatsappanalyzer/static/css/main.25541125.chunk.css",
+    "main.js": "/whatsappanalyzer/static/js/main.77180ccc.chunk.js",
+    "main.js.map": "/whatsappanalyzer/static/js/main.77180ccc.chunk.js.map",
     "runtime~main.js": "/whatsappanalyzer/static/js/runtime~main.37f71523.js",
     "runtime~main.js.map": "/whatsappanalyzer/static/js/runtime~main.37f71523.js.map",
-    "static/js/2.674c61d9.chunk.js": "/whatsappanalyzer/static/js/2.674c61d9.chunk.js",
-    "static/js/2.674c61d9.chunk.js.map": "/whatsappanalyzer/static/js/2.674c61d9.chunk.js.map",
+    "static/js/2.f5d27749.chunk.js": "/whatsappanalyzer/static/js/2.f5d27749.chunk.js",
+    "static/js/2.f5d27749.chunk.js.map": "/whatsappanalyzer/static/js/2.f5d27749.chunk.js.map",
     "index.html": "/whatsappanalyzer/index.html",
-    "precache-manifest.0a928f8a2f49c7980bc1f835e3046eeb.js": "/whatsappanalyzer/precache-manifest.0a928f8a2f49c7980bc1f835e3046eeb.js",
+    "precache-manifest.6a880639c2d31e33d5fa8c6f5f7fd0e3.js": "/whatsappanalyzer/precache-manifest.6a880639c2d31e33d5fa8c6f5f7fd0e3.js",
     "service-worker.js": "/whatsappanalyzer/service-worker.js",
-    "static/css/main.c7d84c72.chunk.css.map": "/whatsappanalyzer/static/css/main.c7d84c72.chunk.css.map"
+    "static/css/main.25541125.chunk.css.map": "/whatsappanalyzer/static/css/main.25541125.chunk.css.map"
   }
 }
