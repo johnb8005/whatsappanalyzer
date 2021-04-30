@@ -4,34 +4,22 @@ import Loader from "./components/loader.js";
 import FileUpload from "./components/file-upload.js";
 import Icon from "./components/icon.js";
 import "./App.css.proxy.js";
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoading: false,
-      isAnalyzed: false,
-      data: null
-    };
-    this.onChangeHandler = this.onChangeHandler.bind(this);
-  }
-  onChangeHandler = (event) => {
-    this.setState({isLoading: true});
+const App = () => {
+  const [data, setData] = React.useState(null);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [isAnalyzed, setIsAnalyzed] = React.useState(false);
+  const onChangeHandler = (event) => {
+    setIsLoading(true);
     const file = event.target.files[0];
     const fileReader = new FileReader();
     fileReader.onloadend = (a) => {
-      const data = fileReader.result;
-      const isAnalyzed = true;
-      const isLoading = false;
-      this.setState({data, isAnalyzed, isLoading});
+      setIsAnalyzed(true);
+      setIsLoading(false);
+      setData(fileReader.result);
     };
     fileReader.readAsText(file);
   };
-  reset = () => {
-    const isAnalyzed = false;
-    this.setState({isAnalyzed});
-  };
-  renderBody() {
-    const {data, isAnalyzed, isLoading} = this.state;
+  const renderBody = () => {
     if (isLoading) {
       return /* @__PURE__ */ React.createElement(Loader, null);
     }
@@ -40,23 +28,21 @@ class App extends React.Component {
         accept: ".txt",
         type: "file",
         name: "file",
-        onChange: this.onChangeHandler
+        onChange: onChangeHandler
       });
     }
     return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("p", null, /* @__PURE__ */ React.createElement("button", {
-      onClick: () => this.reset()
+      onClick: () => setIsAnalyzed(false)
     }, /* @__PURE__ */ React.createElement(Icon, {
       name: "arrow-left"
     }), " Reset")), /* @__PURE__ */ React.createElement(Analysis, {
       data
     }));
-  }
-  render() {
-    return /* @__PURE__ */ React.createElement("div", {
-      className: "App"
-    }, /* @__PURE__ */ React.createElement("header", {
-      className: "App-header"
-    }, /* @__PURE__ */ React.createElement("h1", null, "WhatsApp Chat Analyzer"), this.renderBody()));
-  }
-}
+  };
+  return /* @__PURE__ */ React.createElement("div", {
+    className: "App"
+  }, /* @__PURE__ */ React.createElement("header", {
+    className: "App-header"
+  }, /* @__PURE__ */ React.createElement("h1", null, "WhatsApp Chat Analyzer"), renderBody()));
+};
 export default App;
