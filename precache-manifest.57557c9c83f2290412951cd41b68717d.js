@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ee46437e8c1a12812e27ed7acca9fddf",
+    "revision": "b7a671544495c6a4d59c6a56822bf17a",
     "url": "/whatsappanalyzer/index.html"
   },
   {
-    "revision": "bc53b5d98b15074b8604",
+    "revision": "eac087e9f99ce57f7d52",
     "url": "/whatsappanalyzer/static/css/main.c7d84c72.chunk.css"
   },
   {
-    "revision": "7d6ca62e93a6142ee5e7",
-    "url": "/whatsappanalyzer/static/js/2.b102dcc1.chunk.js"
+    "revision": "9e403b7d064c375a5d9b",
+    "url": "/whatsappanalyzer/static/js/2.674c61d9.chunk.js"
   },
   {
-    "revision": "bc53b5d98b15074b8604",
-    "url": "/whatsappanalyzer/static/js/main.ece8bf49.chunk.js"
+    "revision": "eac087e9f99ce57f7d52",
+    "url": "/whatsappanalyzer/static/js/main.d800a068.chunk.js"
   },
   {
     "revision": "f1ef9747c184a563c7ae",
