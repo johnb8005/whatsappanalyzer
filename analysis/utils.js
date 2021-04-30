@@ -31,8 +31,8 @@ const parseLine = (line, re = /(\d{1,2})\/(\d{1,2})\/(\d{2}), (\d{1,2}):(\d{2}) 
   const a = re.exec(line);
   if (a && a.length === 8) {
     const [_, month, day, year, hour, minute, sender, content] = a;
-    const date = formatDateParse(day, month, year);
-    const time = formatTime(hour, minute);
+    const date = formatDateParse(Number(day), Number(month), Number(year));
+    const time = formatTime(Number(hour), Number(minute));
     return {date, time, sender, content};
   }
   if (attempt === 1) {
