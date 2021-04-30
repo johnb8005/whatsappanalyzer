@@ -1,0 +1,10 @@
+// [snowpack] add styles to the page (skip if no document exists)
+if (typeof document !== 'undefined') {
+  const code = "body {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\",\n    \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\",\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n    monospace;\n}\n\n/*\ncss\n */\n/* unvisited link */\na:link {\n  color: #1f618d;\n}\n/* visited link */\na:visited {\n  color: #1f618d;\n}\n/* mouse over link */\na:hover {\n  color: #1f618d;\n}\n/* selected link */\na:active {\n  color: #1f618d;\n}\nbutton {\n  background-color: #1f618d;\n  border: none;\n  color: white;\n  padding: 10px 10px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px;\n  cursor: pointer;\n}\n/**\n * file uploader styling\n */\n.file-upload-wrapper {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.file-upload-wrapper .file-upload {\n  height: 200px;\n  width: 200px;\n  border-radius: 100px;\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border: 4px solid #ffffff;\n  overflow: hidden;\n  background-image: linear-gradient(to bottom, #1f618d 50%, #ffffff 50%);\n  background-size: 100% 200%;\n  transition: all 1s;\n  color: #ffffff;\n  font-size: 100px;\n}\n.file-upload-wrapper .file-upload input[type=\"file\"] {\n  height: 200px;\n  width: 200px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  opacity: 0;\n  cursor: pointer;\n}\n.file-upload-wrapper .file-upload:hover {\n  background-position: 0 -100%;\n  color: #1f618d;\n}\n";
+
+  const styleEl = document.createElement("style");
+  const codeEl = document.createTextNode(code);
+  styleEl.type = 'text/css';
+  styleEl.appendChild(codeEl);
+  document.head.appendChild(styleEl);
+}
