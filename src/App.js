@@ -33,8 +33,6 @@ class App extends React.Component {
       const isAnalyzed = true;
       const isLoading = false;
 
-      console.log(data);
-
       this.setState({ data, isAnalyzed, isLoading });
     };
 
