@@ -10,7 +10,8 @@ const {
   countDaysDiffBtnDates,
 } = Utils.date;
 
-const formatDateAndTime = (d) => formatDate(d) + " - " + utilFormatTime(d);
+const formatDateAndTime = (d: string | Date): string =>
+  formatDate(d) + " - " + utilFormatTime(d);
 
 export { formatNumber, formatDateAndTime };
 
@@ -21,7 +22,7 @@ export { formatNumber, formatDateAndTime };
  * @param  fn  function that maps the value that is transposed to a potential other value. By default returns same value
  * @return {[type]}       [description]
  */
-export const transpose = (arr, fn = (a) => a) => {
+export const transpose = (arr: any[], fn = (a: any) => a) => {
   const r = {};
 
   Object.keys(arr).map((idx) => {
@@ -39,11 +40,11 @@ export const transpose = (arr, fn = (a) => a) => {
   return r;
 };
 
-const formatDateParse = (day, month, year) => {
+const formatDateParse = (day: number, month: number, year: number) => {
   return `20${year}-${padding(month, 2)}-${padding(day, 2)}`;
 };
 
-const formatTime = (hour, minute) => {
+const formatTime = (hour: number, minute: number) => {
   return `${padding(hour, 2)}:${padding(minute, 2)}:00`;
 };
 
@@ -60,8 +61,8 @@ const parseLine = (
     const [_, month, day, year, hour, minute, sender, content] = a;
     /* eslint-enable no-unused-vars */
 
-    const date = formatDateParse(day, month, year);
-    const time = formatTime(hour, minute);
+    const date = formatDateParse(Number(day), Number(month), Number(year));
+    const time = formatTime(Number(hour), Number(minute));
 
     return { date, time, sender, content };
   }
