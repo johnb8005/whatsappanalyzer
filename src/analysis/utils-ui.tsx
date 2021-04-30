@@ -7,7 +7,7 @@ import BrushBarChart from "../charts/brushbar";
 
 import * as U from "./utils";
 
-export const renderBarChart = (objMap) => {
+export const renderBarChart = (objMap: any) => {
   // turn object into array (right format for barchart)
   const r = Object.keys(objMap).map((k) => {
     return { name: k, value: objMap[k] };
@@ -16,7 +16,7 @@ export const renderBarChart = (objMap) => {
   return <BarChart data={r} />;
 };
 
-export const renderRadar = (data, labels) => {
+export const renderRadar = (data: any, labels: string[]) => {
   const r = Object.keys(data).map((idx) => {
     return { name: idx, ...data[idx] };
   });
@@ -24,14 +24,14 @@ export const renderRadar = (data, labels) => {
   return <RadarChart data={r} labels={labels} />;
 };
 
-export const renderPieChart = (objMap) => {
+export const renderPieChart = (objMap: any) => {
   // turn object into array (right format for barchart)
   const r = Object.keys(objMap).map((k) => ({ name: k, value: objMap[k] }));
 
   return <PieChart data={r} />;
 };
 
-export const renderBrushBarChart = (objMap, labels) => {
+export const renderBrushBarChart = (objMap: any, labels: string[]) => {
   const rt = U.transpose(objMap, (a) => a.messages);
   const r = Object.keys(rt).map((k) => ({
     name: k,
@@ -41,7 +41,7 @@ export const renderBrushBarChart = (objMap, labels) => {
   return <BrushBarChart data={r} labels={labels} />;
 };
 
-export const renderVizBox = (label, value) => (
+export const renderVizBox = (label: string, value: number) => (
   <div>
     {label}: {U.formatNumber(value)}
   </div>

@@ -7,19 +7,13 @@
     "lessc": "^1.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
     "recharts": "^1.6.2"
   },
   "scripts": {
-    "lint": "eslint src/",
     "start": "SNOWPACK_PUBLIC_URL= snowpack dev --polyfill-node",
     "build": "SNOWPACK_PUBLIC_URL=/whatsappanalyzer snowpack build --polyfill-node",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "test": "echo \"tood\"",
     "lessToCss": "lessc ./less/main.less src/App.css"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

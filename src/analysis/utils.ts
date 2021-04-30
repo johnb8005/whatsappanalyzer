@@ -1,5 +1,7 @@
 import Utils from "@nexys/utils";
 
+import { Content } from "./type";
+
 const { formatNumber } = Utils.number;
 const { padding } = Utils.string;
 const {
@@ -46,10 +48,10 @@ const formatTime = (hour, minute) => {
 };
 
 const parseLine = (
-  line,
+  line: string,
   re = /(\d{1,2})\/(\d{1,2})\/(\d{2}), (\d{1,2}):(\d{2}) [AP]M - ([^:]+):(.*)/g, // regex with AM/PM
   attempt = 1
-) => {
+): Content => {
   const a = re.exec(line);
 
   // check if parsing was succesful and that we get the expected amount of fields
@@ -76,10 +78,10 @@ const parseLine = (
   return null;
 };
 
-export const getContent = (lines) =>
+export const getContent = (lines: string[]) =>
   lines.map((line) => parseLine(line)).filter((line) => line !== null);
 
-export const getSenders = (content) => {
+export const getSenders = (content: Content[]) => {
   const senders = {
     times: {},
     days: {},
@@ -135,14 +137,14 @@ export const getSenders = (content) => {
   return senders;
 };
 
-const toDate = (c) => {
+const toDate = (c: { date: string; time: string }): Date => {
   const datestr = c.date + "T" + c.time;
 
   return new Date(datestr);
 };
-const countWordsLine = (line) => line.split(/\s+/).length;
+const countWordsLine = (line: string) => line.split(/\s+/).length;
 
-const count = (content) => {
+const count = (content: Content[]) => {
   return content
     .map((c) => {
       const nWords = countWordsLine(c.content);
@@ -158,7 +160,7 @@ const count = (content) => {
     });
 };
 
-export const getTotals = (content) => {
+export const getTotals = (content: Content[]) => {
   const n = content.length;
   const firstMessage = content[0];
   const lastMessage = content[n - 1];
